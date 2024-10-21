@@ -27,129 +27,22 @@ import EnterNewPassword from "./components/EnterNewPassword/EnterNewPassword";
 function App() {
   let routers = createBrowserRouter([
     {
-      path: "",
-      element: <Layout />,
-      children: [
-        {
-          index: true,
-          element: (
-            <ProtectedComponent>
-              <Home />
-            </ProtectedComponent>
-          ),
-        },
-        {
-          path: "cart",
-          element: (
-            <ProtectedComponent>
-              <Cart />
-            </ProtectedComponent>
-          ),
-        },
-        {
-          path: "checkout/:id",
-          element: (
-            <ProtectedComponent>
-              <CheckOut />
-            </ProtectedComponent>
-          ),
-        },
-        {
-          path: "allorders",
-          element: (
-            <ProtectedComponent>
-              <AllOrders />
-            </ProtectedComponent>
-          ),
-        },
-        {
-          path: "wishlist",
-          element: (
-            <ProtectedComponent>
-              <Wishlist />
-            </ProtectedComponent>
-          ),
-        },
-        {
-          path: "products",
-          element: (
-            <ProtectedComponent>
-              <Productes />
-            </ProtectedComponent>
-          ),
-        },
-        {
-          path: "categories",
-          element: (
-            <ProtectedComponent>
-              <Categories />
-            </ProtectedComponent>
-          ),
-        },
-        {
-          path: "brands",
-          element: (
-            <ProtectedComponent>
-              <Brands />
-            </ProtectedComponent>
-          ),
-        },
-        {
-          path: "login",
-          element: (
-            <ProtectedUser>
-              <Login />
-            </ProtectedUser>
-          ),
-        },
-        {
-          path: "register",
-          element: (
-            <ProtectedUser>
-              <Regestier />
-            </ProtectedUser>
-          ),
-        },
-        {
-          path: "forgetpassword",
-          element: (
-            <ProtectedUser>
-              <ForgetPassword />
-            </ProtectedUser>
-          ),
-        },
-        {
-          path: "resetpassword",
-          element: (
-            <ProtectedUser>
-              <ResetPassword />
-            </ProtectedUser>
-          ),
-        },
-        {
-          path: "enternewpassword",
-          element: (
-            <ProtectedUser>
-              <EnterNewPassword />
-            </ProtectedUser>
-          ),
-        },
-        {
-          path: "details/:id",
-          element: (
-            <ProductDetails>
-              <ProductDetails />
-            </ProductDetails>
-          ),
-        },
-        {
-          path: "products/details/:id",
-          element: (
-            <ProductDetails>
-              <ProductDetails />
-            </ProductDetails>
-          ),
-        },
+      path: "/E-commerce",element: <Layout />,children: [
+        {index: true,element: (<ProtectedComponent><Home /></ProtectedComponent>),},
+        {path: "cart",element: (<ProtectedComponent><Cart /></ProtectedComponent>),},
+        {path: "checkout/:id",element: (<ProtectedComponent><CheckOut /></ProtectedComponent>),},
+        {path: "allorders",element: (<ProtectedComponent><AllOrders /></ProtectedComponent>),},
+        {path: "wishlist",element: (<ProtectedComponent><Wishlist /></ProtectedComponent>),},
+        {path: "products",element: (<ProtectedComponent><Productes /></ProtectedComponent>),},
+        {path: "categories",element: (<ProtectedComponent><Categories /></ProtectedComponent>),},
+        {path: "brands",element: (<ProtectedComponent><Brands /></ProtectedComponent>),},
+        {path: "login",element: (<ProtectedUser><Login /></ProtectedUser>),},
+        {path: "register",element: (<ProtectedUser><Regestier /></ProtectedUser>),},
+        {path: "forgetpassword",element: (<ProtectedUser><ForgetPassword /></ProtectedUser>),},
+        {path: "resetpassword",element: (<ProtectedUser><ResetPassword /></ProtectedUser>),},
+        {path: "enternewpassword",element: (<ProtectedUser><EnterNewPassword /></ProtectedUser>),},
+        {path: "details/:id",element: (<ProductDetails><ProductDetails /></ProductDetails>),},
+        {path: "products/details/:id",element: (<ProductDetails><ProductDetails /></ProductDetails>),},
         { path: "*", element: <Notfound /> },
       ],
     },
