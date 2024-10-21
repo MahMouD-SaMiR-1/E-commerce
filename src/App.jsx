@@ -27,7 +27,7 @@ import EnterNewPassword from "./components/EnterNewPassword/EnterNewPassword";
 function App() {
   let routers = createBrowserRouter([
     {
-      path: "/E-commerce",element: <Layout />,children: [
+      path: "/E-commerce/",element: <Layout />,children: [
         {index: true,element: (<ProtectedComponent><Home /></ProtectedComponent>),},
         {path: "cart",element: (<ProtectedComponent><Cart /></ProtectedComponent>),},
         {path: "checkout/:id",element: (<ProtectedComponent><CheckOut /></ProtectedComponent>),},
